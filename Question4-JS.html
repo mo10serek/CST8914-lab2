@@ -31,15 +31,15 @@
             case 'ArrowDown':
                 currentButton--;
         }
-        if (currentButton >= length) {
+        if (currentButton >= maxNumberOfButtons) {
             currentButton = 0
         } else if (currentButton <= 0) {
-            currentButton = length - 1;
+            currentButton = maxNumberOfButtons - 1;
         }
-    })
 
-    listOfElements[currentButton].onmouseover();
-    button.style.outline = '3px solid black'
+        listOfElements[currentButton].onmouseover();
+        listOfElements[currentButton].style.outline = '3px solid black'
+    })
 </script>
 
 </html>
