@@ -18,19 +18,10 @@
         document.getElementById("demo").innerHTML = "Hello World";
     }
 
-    var activate = document.querySelector("button");
+    var listOfElements = document.getElementById("");
+    var listOfButtons = listOfElements.querySelectorAll('button');
+    console.log(Object.values(listOfButtons));
 
-    function handler(e) {
-        activate.classList.remove("button");
-        if (e.which == 40) {
-            activate = activate.nextElementSibling || activate;
-        } else if (e.which = 38) {
-            activate = activate.previousElementSibling || activate;
-        } else {
-            activate = e.target;
-        }
-        activate.classList.add("button");
-    }
 </script>
 
 </html>
