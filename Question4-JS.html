@@ -18,10 +18,28 @@
         document.getElementById("demo").innerHTML = "Hello World";
     }
 
-    var listOfElements = document.getElementById("");
-    //var listOfButtons = listOfElements.querySelectorAll('button');
+    var listOfElements = document.querySelectorAll('button');
     console.log(listOfElements);
 
+    var maxNumberOfButtons = listOfElements.length
+    var currentButton = 0;
+
+    document.addEventListener('keydown', () => {
+        switch (event.key) {
+            case 'ArrowUp':
+                currentButton++;
+            case 'ArrowDown':
+                currentButton--;
+        }
+        if (currentButton >= length) {
+            currentButton = 0
+        } else if (currentButton <= 0) {
+            currentButton = length - 1;
+        }
+    })
+
+    listOfElements[currentButton].onmouseover();
+    button.style.outline = '3px solid black'
 </script>
 
 </html>
